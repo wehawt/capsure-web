@@ -1,0 +1,107 @@
+.navbar{
+  background-color: #fe6f27;
+}
+
+
+
+.row{
+  list-style-type: none;
+}
+
+.box-1{
+  margin-top: 100px;
+}
+
+
+
+.btn {
+  line-height: 50px;
+  height: 40px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+.btn-one {
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: #fe6f27;
+  border-bottom-color: #fe6f27;
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-one:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+
+
+
+
+
+
+.btnsignin{
+  margin-top: 300px;
+  margin-left: 250px;
+}
+
+
+
+.img1wc{
+  margin-left: 350px;
+}
+
+.manage{
+  color: rgb(228, 219, 208);
+  font-weight: 75;
+  margin-left: 400px;
+  margin-top: 50px;
+}
+
+.ease{
+  color: #fe6f27;
+  margin-left: 400px;
+}
+
+.intro{
+  color: rgb(228, 219, 208);
+  font-weight: 75;
+  margin-left: 400px;
+  margin-top: 50px;
+}
