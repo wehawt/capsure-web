@@ -41,7 +41,9 @@
         <div class="justify-content-right">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link text-white" href="signup.html">Sign up<span class="sr-only">(current)</span></a>
+            <form method="POST">
+            <a class="nav-link text-white" formaction="/signup" href="{{ url_for('signup') }}">Sign up<span class="sr-only">(current)</span></a>
+            </form>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="Aboutus.html">About</a>

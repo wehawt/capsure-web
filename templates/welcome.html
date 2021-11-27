@@ -35,7 +35,7 @@
           <li class="nav-item active">
             <form action="/" method="POST">
             <a class="nav-link text-white" href="{{ url_for('homepage') }}">Home <span class="sr-only">(current)</span></a>
-            </form>
+            
           </li>
         </ul>
         </div>
@@ -43,7 +43,9 @@
         <div class="justify-content-right">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link text-white" href="signup.html">Logout<span class="sr-only">(current)</span></a>
+          
+            <a class="nav-link text-white" formaction="/signup" href="{{ url_for('signin') }}">Logout<span class="sr-only">(current)</span></a>
+          </form>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="Aboutus.html">About</a>

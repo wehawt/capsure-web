@@ -18,8 +18,8 @@
     <!-- START Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-info">
       <div class="container">
-      <form action="/" method="POST">
-        <a class="navbar-brand text-white" href="{{ url_for('homepage') }}">
+      <form method="POST">
+        <a class="navbar-brand text-white" formaction="/welcome" href="{{ url_for('homepage') }}">
           <img src="/static/photos/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
           Capsure
         </a>
@@ -42,7 +42,9 @@
         <div class="justify-content-right">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link text-white" href="signup.html">Sign up<span class="sr-only">(current)</span></a>
+            <form method="POST">
+            <a class="nav-link text-white" formaction="/signup" href="{{ url_for('signup') }}">Sign up<span class="sr-only">(current)</span></a>
+          </form>
           </li>
           <li class="nav-item">
             <a id="asd" class="nav-link text-white" href="Aboutus.html">About</a>
@@ -80,23 +82,23 @@
           </div>
           
           <div class="card-body">
-            <form>
+            <form method="POST" action="{{ url_for('login') }}">
               <div class="form-group">
                 
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" style="border: none; border-bottom: 2px solid#2F2F2F;">
+                <input type="email" name="email_login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" style="border: none; border-bottom: 2px solid#2F2F2F;">
                 
               </div>
               <div class="form-group">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="border: none; border-bottom: 2px solid#2F2F2F; margin-top: 50px;">
+                <input type="password" name="password_login" class="form-control" id="exampleInputPassword1" placeholder="Password" style="border: none; border-bottom: 2px solid#2F2F2F; margin-top: 50px;">
               </div>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
               </div>
               <div class="container row">
-                <form><button onclick="test()" formaction="/welcome" href="{{ url_for('welcome') }}" type="submit" class="btn btn-primary col" style="background-color: #2F2F2F; border-color: #2F2F2F; max-width: 85px; margin-top: 20px;">Submit</button></form>
+                <button type="submit" class="btn btn-primary col" style="background-color: #2F2F2F; border-color: #2F2F2F; max-width: 85px; margin-top: 20px;">Submit</button>
                 <small id="emailHelp" class="form-text text-muted col" style="margin-top: 25px;">You don't have an account?</small>
-                <a class="sign-up" href="..."><small id="emailHelp">Sign up</small></a>
+                <a class="sign-up" formaction="/signup" href="{{ url_for('signup') }}"><small id="emailHelp">Sign up</small></a>
               </div>
             </form>
           </div>
