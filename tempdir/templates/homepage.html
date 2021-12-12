@@ -30,13 +30,7 @@
       </button>
       <!-- Image and text -->
       
-      <div class="collapse navbar-collapse justify-content-left" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link text-white" href="home.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-        </div>
+      
 
         <div class="justify-content-right">
         <ul class="navbar-nav mr-auto">
@@ -46,7 +40,9 @@
             </form>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="Aboutus.html">About</a>
+            <form action="/about" method="POST">
+              <a class="nav-link text-white" href="{{ url_for('about') }}">About</a>
+            </form>
           </li>
         </ul>
         </div>
