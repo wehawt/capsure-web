@@ -184,10 +184,10 @@
           dataType: 'json',
           success: function(result) {
               message = result.message;
-              if(message == "Account Created Successfully"){
+              if(message == "Account Created Successfuly"){
                 var txt;
                 if (confirm("Account created successfully, you want to login now?")) {
-                  window.location.href="/signin";
+                  window.location.href="/login";
                 } else {
                   window.location.href="/";
                 }

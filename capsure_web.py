@@ -74,17 +74,6 @@ def regis():
         message = {"message":"Account Created Successfuly"}
         return jsonify(message)
 
-#------------------Render-----------------------------
-@cap_app.route('/createdAcc', methods=['GET', 'POST'])
-def createdAcc():
-    return render_template('signin.html')
-    
-
-@cap_app.route('/login', methods=['GET'])
-def login():  
-    return render_template("signin.html")
-
-#----------------------------------------------------
 
 @cap_app.route('/validate', methods=['POST'])
 def validate():
@@ -109,40 +98,41 @@ def validate():
             message = {"message":"Incorrect Credentials"}
 
     return jsonify(message)
+#------------------Render-----------------------------
+@cap_app.route('/createdAcc', methods=['GET', 'POST'])
+def createdAcc():
+    return render_template('signin.html')
+    
+
+@cap_app.route('/login', methods=['GET'])
+def login():  
+    return render_template("signin.html")
+
+#----------------------------------------------------
+
+
 
 @cap_app.route("/", methods=['POST','GET'])
 def homepage():
     if request.method == 'POST':
-        # do stuff when the form is submitted
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
         return redirect(url_for('homepage'))
     return render_template("homepage.html")
 
 @cap_app.route('/signin',methods=['POST','GET'])
 def signin():
     if request.method == 'POST':
-        # do stuff when the form is submitted
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
         return redirect(url_for('signin'))
     return render_template("signin.html")
 
 @cap_app.route('/welcome',methods=['POST','GET'])
 def welcome():
     if request.method == 'POST':
-        # do stuff when the form is submitted
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
         return redirect(url_for('welcome'))
     return render_template("welcome.html")
 
 @cap_app.route('/signup',methods=['POST','GET'])
 def signup():
     if request.method == 'POST':
-        # do stuff when the form is submitted
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
         return redirect(url_for('signup'))
     return render_template("signup.html")
 
@@ -150,14 +140,8 @@ def signup():
 @cap_app.route('/about',methods=['POST','GET'])
 def about():
     if request.method == 'POST':
-        # do stuff when the form is submitted
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
         return redirect(url_for('about'))
     return render_template("about.html")
-
-
-
 
 if __name__ == "__main__":
     db.create_all()
